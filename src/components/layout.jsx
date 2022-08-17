@@ -3,7 +3,7 @@ import React from "react";
 
 function Layout({ pageTitle, children }) {
   return (
-    <div className="m-auto max-w-4xl">
+    <div className="m-auto max-w-6xl">
       <title>{pageTitle}</title>
       <nav>
         <ul className="flex pl-0">

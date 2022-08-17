@@ -78,8 +78,8 @@ const IndexPage = () => {
             <th className="w-1/6 border-r">이름</th>
             <th className="w-1/6 border-r">
               <div className="w-full flex justify-between">
-                <div className="">영상시간</div>
-                <div className="">
+                <div className="flex items-center">영상시간</div>
+                <div>
                   <button
                     onClick={() => {
                       setStudyItem("videoTimeSum");
@@ -93,8 +93,8 @@ const IndexPage = () => {
             </th>
             <th className="w-1/6 border-r">
               <div className="w-full flex justify-between">
-                <div className="">유튜브 시청 수</div>
-                <div className="">
+                <div className="flex items-center">유튜브 시청 수</div>
+                <div>
                   <button
                     onClick={() => {
                       setStudyItem("youtubeWatchCountSum");
@@ -108,8 +108,8 @@ const IndexPage = () => {
             </th>
             <th className="w-1/6 border-r">
               <div className="w-full flex justify-between">
-                <div className="">백준 공부 시간</div>
-                <div className="">
+                <div className="flex items-center">백준 공부 시간</div>
+                <div>
                   <button
                     onClick={() => {
                       setStudyItem("baekjoonTimeSum");
@@ -123,8 +123,8 @@ const IndexPage = () => {
             </th>
             <th className="w-1/6">
               <div className="w-full flex justify-between">
-                <div className="">블로그 글 업로드 수</div>
-                <div className="">
+                <div className="flex items-center">블로그 글 업로드 수</div>
+                <div>
                   <button
                     onClick={() => {
                       setStudyItem("blogUploadCountSum");
