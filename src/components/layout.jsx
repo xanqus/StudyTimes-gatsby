@@ -3,16 +3,16 @@ import React from "react";
 
 function Layout({ pageTitle, children }) {
   return (
-    <div className="m-auto max-w-lg">
+    <div className="m-auto max-w-4xl">
       <title>{pageTitle}</title>
       <nav>
         <ul className="flex pl-0">
-          <li className="pr-8" key={1}>
+          <li className="pr-8">
             <Link className="text-black" to="/">
               Home
             </Link>
           </li>
-          <li className="pr-8" key={2}>
+          <li className="pr-8">
             <Link className="text-black" to="/about">
               About
             </Link>
