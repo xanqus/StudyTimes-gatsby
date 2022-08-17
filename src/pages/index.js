@@ -13,7 +13,7 @@ const IndexPage = () => {
     const getData = async () => {
       try {
         const data = await axios({
-          url: `http://13.125.208.175:4041/studytime/sort?studyItem=${studyItem}&lectureID=${lectureID}`,
+          url: `https://studytime-backend.hyper-x.kr/studytime/sort?studyItem=${studyItem}&lectureID=${lectureID}`,
           method: "GET",
         });
         setStudyTimes(data.data);
