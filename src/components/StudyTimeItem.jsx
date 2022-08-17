@@ -31,11 +31,51 @@ const StudyTimeItem = ({ index, studyTime }) => {
           <div className="pl-4">{index + 1}</div>
         )}
       </td>
-      <td className="border-r">{studyTime.studentName}</td>
-      <td className="border-r">{studyTime.videoTimeSum}</td>
-      <td className="border-r">{studyTime.youtubeWatchCountSum}</td>
-      <td className="border-r">{studyTime.baekjoonTimeSum}</td>
-      <td>{studyTime.blogUploadCountSum}</td>
+      <td
+        className={
+          studyTime.studentName == "류승현"
+            ? "border-r line-through decoration-red-500"
+            : "border-r"
+        }
+      >
+        {studyTime.studentName}
+      </td>
+      <td
+        className={
+          studyTime.studentName == "류승현"
+            ? "border-r line-through decoration-red-500"
+            : "border-r"
+        }
+      >
+        {studyTime.videoTimeSum}
+      </td>
+      <td
+        className={
+          studyTime.studentName == "류승현"
+            ? "border-r line-through decoration-red-500"
+            : "border-r"
+        }
+      >
+        {studyTime.youtubeWatchCountSum}
+      </td>
+      <td
+        className={
+          studyTime.studentName == "류승현"
+            ? "border-r line-through decoration-red-500"
+            : "border-r"
+        }
+      >
+        {studyTime.baekjoonTimeSum}
+      </td>
+      <td
+        className={
+          studyTime.studentName == "류승현"
+            ? "line-through decoration-red-500"
+            : ""
+        }
+      >
+        {studyTime.blogUploadCountSum}
+      </td>
     </tr>
   );
 };

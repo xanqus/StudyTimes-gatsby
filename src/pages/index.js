@@ -65,10 +65,22 @@ const IndexPage = () => {
           <option value={"20220712I"}>2022-07-12 I반</option>
         </select>
       </div>
+      <div className="flex justify-end">업로드 현황</div>
+      <div className="flex justify-end">
+        <progress
+          class="progress progress-info w-56"
+          value={(19 - usersNotUploadStudyTime) / 19}
+          max="100"
+        ></progress>
+      </div>
       <div>업로드 안한 사람</div>
       <div className="flex w-full component-preview p-4 items-center justify-start gap-2">
         {usersNotUploadStudyTime.map((userNotUploadStudyTime, index) => {
-          return <div key={index}>{userNotUploadStudyTime.studentName}</div>;
+          return (
+            <div className="truncate" key={index}>
+              {userNotUploadStudyTime.studentName}
+            </div>
+          );
         })}
       </div>
       <table className="table w-full">
