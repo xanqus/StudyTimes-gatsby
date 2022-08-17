@@ -1,4 +1,5 @@
 import axios from "axios";
+import { StaticImage } from "gatsby-plugin-image";
 import React, { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import StudyTimeItem from "../components/StudyTimeItem";
@@ -7,16 +8,40 @@ const IndexPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [studyTimes, setStudyTimes] = useState([]);
+  const [usersNotUploadStudyTime, setUsersNotUploadStudyTime] = useState([]);
   const [studyItem, setStudyItem] = useState("videoTimeSum");
   const [lectureID, setLectureID] = useState("20220512A");
+
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await axios({
+        const studyTimeData = await axios({
           url: `https://studytime-backend.hyper-x.kr/studytime/sort?studyItem=${studyItem}&lectureID=${lectureID}`,
           method: "GET",
         });
-        setStudyTimes(data.data);
+        setStudyTimes(studyTimeData.data);
+        setLoading(false);
+      } catch (e) {
+        setError(e);
+      }
+    };
+    getData();
+  }, [lectureID, studyItem]);
+  useEffect(() => {
+    var today = new Date();
+    var year = today.getFullYear();
+    var month = ("0" + (today.getMonth() + 1)).slice(-2);
+    var day = ("0" + today.getDate()).slice(-2);
+    var dateString = year + "-" + month + "-" + day;
+
+    const getData = async () => {
+      try {
+        const notUploadUserData = await axios({
+          url: `https://studytime-backend.hyper-x.kr/user/not-submit?lectureID=${lectureID}&date=${dateString}`,
+          method: "GET",
+        });
+
+        setUsersNotUploadStudyTime(notUploadUserData.data);
         setLoading(false);
       } catch (e) {
         setError(e);
@@ -39,6 +64,12 @@ const IndexPage = () => {
           <option value={"20220512A"}>2022-05-12 A반</option>
           <option value={"20220712I"}>2022-07-12 I반</option>
         </select>
+      </div>
+      <div>업로드 안한 사람</div>
+      <div className="flex w-full component-preview p-4 items-center justify-start gap-2">
+        {usersNotUploadStudyTime.map((userNotUploadStudyTime, index) => {
+          return <div key={index}>{userNotUploadStudyTime.studentName}</div>;
+        })}
       </div>
       <table className="table w-full">
         <thead>
