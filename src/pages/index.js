@@ -74,7 +74,7 @@ const IndexPage = () => {
       <table className="table w-full">
         <thead>
           <tr>
-            <th className="w-1/6 border-r">등수</th>
+            <th className="w-1/6 border-r pl-6">등수</th>
             <th className="w-1/6 border-r">이름</th>
             <th className="w-1/6 border-r">
               <div className="w-full flex justify-between">
