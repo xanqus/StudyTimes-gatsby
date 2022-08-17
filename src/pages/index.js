@@ -13,7 +13,7 @@ const IndexPage = () => {
     const getData = async () => {
       try {
         const data = await axios({
-          url: `http://localhost:4041/studytime/sort?studyItem=${studyItem}&lectureID=${lectureID}`,
+          url: `http://13.125.208.175:4041/studytime/sort?studyItem=${studyItem}&lectureID=${lectureID}`,
           method: "GET",
         });
         setStudyTimes(data.data);
@@ -53,7 +53,7 @@ const IndexPage = () => {
                     onClick={() => {
                       setStudyItem("videoTimeSum");
                     }}
-                    className="w-12 btn btn-outline btn-ghost btn-xs m-auto"
+                    className="w-6 btn btn-outline btn-ghost btn-xs m-auto"
                   >
                     ↓
                   </button>
@@ -68,7 +68,7 @@ const IndexPage = () => {
                     onClick={() => {
                       setStudyItem("youtubeWatchCountSum");
                     }}
-                    className="w-12 btn btn-outline btn-ghost btn-xs m-auto"
+                    className="w-6 btn btn-outline btn-ghost btn-xs m-auto"
                   >
                     ↓
                   </button>
@@ -83,7 +83,7 @@ const IndexPage = () => {
                     onClick={() => {
                       setStudyItem("baekjoonTimeSum");
                     }}
-                    className="w-12 btn btn-outline btn-ghost btn-xs m-auto"
+                    className="w-6 btn btn-outline btn-ghost btn-xs m-auto"
                   >
                     ↓
                   </button>
@@ -98,7 +98,7 @@ const IndexPage = () => {
                     onClick={() => {
                       setStudyItem("blogUploadCountSum");
                     }}
-                    className="w-12 btn btn-outline btn-ghost btn-xs m-auto"
+                    className="w-6 btn btn-outline btn-ghost btn-xs m-auto"
                   >
                     ↓
                   </button>
