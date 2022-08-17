@@ -46,56 +46,64 @@ const IndexPage = () => {
             <th className="w-1/6 border-r">등수</th>
             <th className="w-1/6 border-r">이름</th>
             <th className="w-1/6 border-r">
-              <span>영상시간</span>
-              <span>
-                <button
-                  onClick={() => {
-                    setStudyItem("videoTimeSum");
-                  }}
-                  className="w-12 btn btn-outline btn-accent btn-xs m-auto"
-                >
-                  ↓
-                </button>
-              </span>
+              <div className="w-full flex justify-between">
+                <div className="">영상시간</div>
+                <div className="">
+                  <button
+                    onClick={() => {
+                      setStudyItem("videoTimeSum");
+                    }}
+                    className="w-12 btn btn-outline btn-ghost btn-xs m-auto"
+                  >
+                    ↓
+                  </button>
+                </div>
+              </div>
             </th>
             <th className="w-1/6 border-r">
-              <span>유튜브 시청 수</span>
-              <span>
-                <button
-                  onClick={() => {
-                    setStudyItem("youtubeWatchCountSum");
-                  }}
-                  className="w-12 btn btn-outline btn-accent btn-xs m-auto"
-                >
-                  ↓
-                </button>
-              </span>
+              <div className="w-full flex justify-between">
+                <div className="">유튜브 시청 수</div>
+                <div className="">
+                  <button
+                    onClick={() => {
+                      setStudyItem("youtubeWatchCountSum");
+                    }}
+                    className="w-12 btn btn-outline btn-ghost btn-xs m-auto"
+                  >
+                    ↓
+                  </button>
+                </div>
+              </div>
             </th>
             <th className="w-1/6 border-r">
-              <span>백준 공부 시간</span>
-              <span>
-                <button
-                  onClick={() => {
-                    setStudyItem("baekjoonTimeSum");
-                  }}
-                  className="w-12 btn btn-outline btn-accent btn-xs m-auto"
-                >
-                  ↓
-                </button>
-              </span>
+              <div className="w-full flex justify-between">
+                <div className="">백준 공부 시간</div>
+                <div className="">
+                  <button
+                    onClick={() => {
+                      setStudyItem("baekjoonTimeSum");
+                    }}
+                    className="w-12 btn btn-outline btn-ghost btn-xs m-auto"
+                  >
+                    ↓
+                  </button>
+                </div>
+              </div>
             </th>
             <th className="w-1/6">
-              <span>블로그 글 업로드 수</span>
-              <span>
-                <button
-                  onClick={() => {
-                    setStudyItem("blogUploadCountSum");
-                  }}
-                  className="w-12 btn btn-outline btn-accent btn-xs m-auto"
-                >
-                  ↓
-                </button>
-              </span>
+              <div className="w-full flex justify-between">
+                <div className="">블로그 글 업로드 수</div>
+                <div className="">
+                  <button
+                    onClick={() => {
+                      setStudyItem("blogUploadCountSum");
+                    }}
+                    className="w-12 btn btn-outline btn-ghost btn-xs m-auto"
+                  >
+                    ↓
+                  </button>
+                </div>
+              </div>
             </th>
           </tr>
         </thead>
