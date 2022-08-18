@@ -68,11 +68,12 @@ const IndexPage = () => {
       <div className="flex justify-end">업로드 현황</div>
       <div className="flex justify-end">
         <progress
-          class="progress progress-info w-56"
-          value={(19 - usersNotUploadStudyTime) / 19}
-          max="100"
+          className="progress progress-info w-56"
+          value={19 - usersNotUploadStudyTime.length}
+          max="19"
         ></progress>
       </div>
+
       <div>업로드 안한 사람</div>
       <div className="flex w-full component-preview p-4 items-center justify-start gap-2">
         {usersNotUploadStudyTime.map((userNotUploadStudyTime, index) => {
