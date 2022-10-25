@@ -16,7 +16,7 @@ const IndexPage = () => {
     const getData = async () => {
       try {
         const studyTimeData = await axios({
-          url: `https://studytime-backend.hyper-x.kr/studytime/sort?studyItem=${studyItem}&lectureID=${lectureID}`,
+          url: `https://api.studytime-backend.hyper-x.kr/studytime/sort?studyItem=${studyItem}&lectureID=${lectureID}`,
           method: "GET",
         });
         setStudyTimes(studyTimeData.data);
@@ -37,7 +37,7 @@ const IndexPage = () => {
     const getData = async () => {
       try {
         const notUploadUserData = await axios({
-          url: `https://studytime-backend.hyper-x.kr/user/not-submit?lectureID=${lectureID}&date=${dateString}`,
+          url: `https://api.studytime-backend.hyper-x.kr/user/not-submit?lectureID=${lectureID}&date=${dateString}`,
           method: "GET",
         });
 
